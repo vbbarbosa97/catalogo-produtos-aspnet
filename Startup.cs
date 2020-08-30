@@ -30,7 +30,12 @@ namespace catalago_api
             //adicionando a conexão com banco e colocando o appDbContext como um serviço
             //DefaultConnection esta dentro de appsettings.json
             services.AddDbContext<AppDbContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddControllers().AddNewtonsoftJson();
+            
+            //adicionando o serviço do newtonsoft e configurando para ignorar as referencias ciclicas dentro das entidades
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
