@@ -4,6 +4,7 @@ using catalago_api.Context;
 using catalago_api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Services;
 
 namespace catalago_api.Controllers
 {
@@ -12,9 +13,11 @@ namespace catalago_api.Controllers
     public class ProdutoController : ControllerBase
     {
         private AppDbContext database;
-        public ProdutoController(AppDbContext context)
+        private IProdutoService ProdutoService;
+        public ProdutoController(AppDbContext context, IProdutoService produtoService)
         {
             database = context;
+            ProdutoService = produtoService;
         }
 
         [HttpGet("listar")]
@@ -66,6 +69,11 @@ namespace catalago_api.Controllers
             database.Produtos.Remove(produto);
             database.SaveChanges();
             return produto;
+        }
+
+        [HttpGet("testeService")]
+        public ActionResult<string> testeService() {
+            return ProdutoService.ListarProdutosService();
         }
     }
 }

@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using catalago_api.Context;
 using Microsoft.EntityFrameworkCore;
+using Services;
 
 namespace catalago_api
 {
@@ -36,6 +37,9 @@ namespace catalago_api
             {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
+
+            //injetando a dependecia do service
+            services.AddTransient<IProdutoService, ProdutoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

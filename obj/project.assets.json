@@ -1033,19 +1033,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vinicius\\.nuget\\packages\\": {}
+    "C:\\Users\\Vinicius\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinicius\\Desktop\\Estudo-dotnet\\catalago_api\\catalago_api.csproj",
+      "projectUniqueName": "C:\\Users\\Vinicius\\Desktop\\Projetos\\AspNet\\catalogo-produtos-aspnet\\catalago_api.csproj",
       "projectName": "catalago_api",
-      "projectPath": "C:\\Users\\vinicius\\Desktop\\Estudo-dotnet\\catalago_api\\catalago_api.csproj",
-      "packagesPath": "C:\\Users\\vinicius\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinicius\\Desktop\\Estudo-dotnet\\catalago_api\\obj\\",
+      "projectPath": "C:\\Users\\Vinicius\\Desktop\\Projetos\\AspNet\\catalogo-produtos-aspnet\\catalago_api.csproj",
+      "packagesPath": "C:\\Users\\Vinicius\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vinicius\\Desktop\\Projetos\\AspNet\\catalogo-produtos-aspnet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vinicius\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Vinicius\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
